@@ -1,6 +1,7 @@
 #!/usr/bin/env
 
 
+import unittest
 import shield
 
 
@@ -24,8 +25,6 @@ def main():
     test_label()
     print("Test multiple style parameters:")
     test_multiple()
-    print('\n\nTesting Exceptions:')
-    # TODO: Add unittesting for exceptions.
 
 
 def test_static():
@@ -75,5 +74,30 @@ def test_multiple():
     print("![](%s)" % new_shield.generate())
 
 
+class ExceptionTest(unittest.TestCase):
+    """Check exceptions."""
+    def test_color(self):
+        new_shield = shield.Static("foo", "bar", "redr")
+        self.assertRaises(ValueError, new_shield.generate)
+
+    def test_hex(self):
+        new_shield = shield.Static("foo", "bar", "FFFF")
+        self.assertRaises(ValueError, new_shield.generate)
+
+    def test_logo(self):
+        new_shield = shield.Static("foo", "bar", "red", logo="foobar")
+        self.assertRaises(ValueError, new_shield.generate)
+
+    def test_style(self):
+        new_shield = shield.Static("foo", "bar", "red", style="foobar")
+        self.assertRaises(ValueError, new_shield.generate)
+   
+        
+
+
 if __name__ == '__main__':
+    print("\nCheck for malformed urls in a mardown editor...\n\n")
     main()
+    print("\n\nChecking exceptions...\n\n")
+    unittest.main()
+

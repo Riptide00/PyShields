@@ -26,7 +26,7 @@ class Static(object):
         self.color = color
         # Configure other hosts.
         self.url = "http://img.shields.io"
-        # Badge style.
+        # Shield style.
         self.style = style
         # Override left label.
         self.label = label
@@ -93,7 +93,7 @@ def _get_style(style, label, logo, logoWidth, linkA, linkB, colorA, colorB, maxA
 # Check as many errors before they hit the server.
 
 def _check_style(style):
-    """Check if q named logo is valid."""
+    """Check if named logo is valid."""
     if not style in Styles:
         raise ValueError("Invalid style: %s" % style)
 
@@ -113,7 +113,7 @@ def _check_logo(logo):
 
 def _check_hex(color):
     """Check if string is a hex color code."""
-    if re.search(r'(?:[0-9a-fA-F]{3}){1,2}$', color):                      
+    if re.search(r'^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$', color):                      
         return True
     else:
         return False    

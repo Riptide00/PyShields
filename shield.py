@@ -88,9 +88,11 @@ class Static(object):
     def generate(self):
         """Generate static shield url."""
         _check_color(self.color)
+        format_subject = _check_text(self.subject)
+        format_status = _check_text(self.status)
         st = _get_style(self.style, self.label, self.logo, self.logoWidth,
                         self.linkA, self.linkB, self.colorA, self.colorB, self.maxAge)
-        return self._str % (self.url, self.subject, self.status, self.color, st)
+        return self._str % (self.url, format_subject, format_status, self.color, st)
 
 
 class Dynamic(object):
@@ -129,6 +131,12 @@ def _get_style(style, label, logo, logoWidth, linkA, linkB, colorA, colorB, maxA
         return ''
 
 # Check as many errors before they hit the server.
+
+def _check_text(text):
+    text = text.replace("-", "--")
+    text = text.replace("_", "__")
+    text = text.replace(" ", "_")
+    return text
 
 def _check_style(style):
     """Check if named logo is valid."""

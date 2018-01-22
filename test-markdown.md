@@ -3,8 +3,8 @@ Simple static shield:
 Test all available styles:
 ![](http://img.shields.io/badge/style-plastic-lightgrey.svg?style=plastic)
 ![](http://img.shields.io/badge/style-flat-lightgrey.svg?style=flat)
-![](http://img.shields.io/badge/style-flat-square-lightgrey.svg?style=flat-square)
-![](http://img.shields.io/badge/style-for-the-badge-lightgrey.svg?style=for-the-badge)
+![](http://img.shields.io/badge/style-flat--square-lightgrey.svg?style=flat-square)
+![](http://img.shields.io/badge/style-for--the--badge-lightgrey.svg?style=for-the-badge)
 ![](http://img.shields.io/badge/style-social-lightgrey.svg?style=social)
 Test all available named colors:
 ![](http://img.shields.io/badge/color-brightgreen-brightgreen.svg)
@@ -25,7 +25,7 @@ Test all available named logos:
 ![](http://img.shields.io/badge/logo-dockbit-lightgrey.svg?logo=dockbit)
 ![](http://img.shields.io/badge/logo-eclipse-lightgrey.svg?logo=eclipse)
 ![](http://img.shields.io/badge/logo-github-lightgrey.svg?logo=github)
-![](http://img.shields.io/badge/logo-gitter-white-lightgrey.svg?logo=gitter-white)
+![](http://img.shields.io/badge/logo-gitter--white-lightgrey.svg?logo=gitter-white)
 ![](http://img.shields.io/badge/logo-gratipay-lightgrey.svg?logo=gratipay)
 ![](http://img.shields.io/badge/logo-paypal-lightgrey.svg?logo=paypal)
 ![](http://img.shields.io/badge/logo-postgresql-lightgrey.svg?logo=postgresql)

@@ -29,49 +29,49 @@ def main():
 
 
 def test_static():
-    new_shield = shield.Static("foo", "bar", "red")
+    new_shield = shield.Static("py", "shields", "lightgrey")
     print("![](%s)" % new_shield.generate())
 
 
 def test_styles():
     for style in shield.Styles:
-        new_shield = shield.Static("foo", "bar", "green", style=style)
+        new_shield = shield.Static("style", style, "lightgrey", style=style)
         print("![](%s)" % new_shield.generate())
 
 
 def test_colors():
     for color in shield.Colors:
-        new_shield = shield.Static("foo", "bar", color)
+        new_shield = shield.Static("color", color, color)
         print("![](%s)" % new_shield.generate())
 
 
 def test_color_hex():
-    new_shield = shield.Static("foo", "bar", "FF00FF")
+    new_shield = shield.Static("hex", "FF00FF", "FF00FF")
     print("![](%s)" % new_shield.generate())
 
 
 def test_logos():
     for logo in shield.Logos:
-        new_shield = shield.Static("foo", "bar", "red", logo=logo)
+        new_shield = shield.Static("logo", logo, "lightgrey", logo=logo)
         print("![](%s)" % new_shield.generate())
 
 
 def test_colorA():
-    new_shield = shield.Static("foo", "bar", "red", colorA="FF00FF")
+    new_shield = shield.Static("color", "a", "lightgrey", colorA="FF00FF")
     print("![](%s)" % new_shield.generate())
 
 
 def test_colorB():
-    new_shield = shield.Static("foo", "bar", "red", colorB="FF00FF")
+    new_shield = shield.Static("color", "b", "lightgrey", colorB="FF00FF")
     print("![](%s)" % new_shield.generate())
 
 
 def test_label():
-    new_shield = shield.Static("foo", "bar", "red", label="bar")
+    new_shield = shield.Static("foo", "bar", "lightgrey", label="label")
     print("![](%s)" % new_shield.generate())
 
 def test_multiple():
-    new_shield = shield.Static("foo", "bar", "red", colorA="FF00FF", colorB="FF00FF", label="bar", logo="github")
+    new_shield = shield.Static("git", "hub", "lightgrey", colorA="FF00FF", colorB="FF00FF", label="bar", logo="github")
     print("![](%s)" % new_shield.generate())
 
 

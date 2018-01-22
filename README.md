@@ -40,6 +40,12 @@ Unofficial python wrapper for the [shields.io](https://shields.io) public API.
     new_shield = shield.Static("foo", "bar", "FF00FF")
     print(new_shield.generate())
 
+## Roadmap
+
+- [x] Static shields.
+- [ ] Dynamic shields.
+
+
 ## Changelog
 
 - v1.0.0: Initial release.

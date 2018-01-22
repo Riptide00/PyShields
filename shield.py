@@ -9,10 +9,38 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("subject", help="Shield text left.", type=str)
     parser.add_argument("status", help="Shield text right.", type=str)
-    parser.add_argument("color", help="Shield color right.", type=str)
+    parser.add_argument("color", help="Right side color.", type=str)
+    parser.add_argument("--style", help="Shield style.", type=str)
+    parser.add_argument("--label", help="Left text override.", type=str)
+    parser.add_argument("--logo", help="Left side logo.", type=str)
+    parser.add_argument("--logoWidth", help="Logo space width.", type=int)
+    parser.add_argument("--linkA", help="Left side link.", type=str)
+    parser.add_argument("--linkB", help="Right side link.", type=str)
+    parser.add_argument("--colorA", help="Left side color override.", type=str)
+    parser.add_argument("--colorB", help="Right side color override.", type=str)
+    parser.add_argument("--maxAge", help="Cache time in seconds.", type=int)
     args = parser.parse_args()
     new_shield = Static(args.subject, args.status, args.color)
+    if args.style:
+        new_shield.style = args.style
+    if args.label:
+        new_shield.label = args.label
+    if args.logo:
+        new_shield.logo = args.logo
+    if args.logoWidth:
+        new_shield.logoWidth = args.logoWidth
+    if args.linkA:
+        new_shield.linkA = args.linkA
+    if args.linkB:
+        new_shield.linkB = args.linkB
+    if args.colorA:
+        new_shield.colorA = args.colorA
+    if args.colorB:
+        new_shield.colorB = args.colorB
+    if args.maxAge:
+        new_shield.maxAge = args.maxAge
     print(new_shield.generate())
+
 
 # Available badge styles.
 Styles = ["plastic", "flat", "flat-square", "for-the-badge", "social"]

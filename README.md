@@ -15,23 +15,23 @@ Unofficial python wrapper for the [shields.io](https://shields.io) public API.
                    [--colorA COLORA] [--colorB COLORB] [--maxAge MAXAGE]
                    subject status color
 
-  positional arguments:
-    subject               Shield text left.
-    status                Shield text right.
-    color                 Right side color.
+      positional arguments:
+        subject               Shield text left.
+        status                Shield text right.
+        color                 Right side color.
 
-  optional arguments:
-    -h, --help            show this help message and exit
-    --style STYLE         Shield style.
-    --label LABEL         Left text override.
-    --logo LOGO           Left side logo.
-    --logoWidth LOGOWIDTH
-                          Logo space width.
-    --linkA LINKA         Left side link.
-    --linkB LINKB         Right side link.
-    --colorA COLORA       Left side color override.
-    --colorB COLORB       Right side color override.
-    --maxAge MAXAGE       Cache time in seconds.
+      optional arguments:
+        -h, --help            show this help message and exit
+        --style STYLE         Shield style.
+        --label LABEL         Left text override.
+        --logo LOGO           Left side logo.
+        --logoWidth LOGOWIDTH
+                              Logo space width.
+        --linkA LINKA         Left side link.
+        --linkB LINKB         Right side link.
+        --colorA COLORA       Left side color override.
+        --colorB COLORB       Right side color override.
+        --maxAge MAXAGE       Cache time in seconds.
   
 **in a script:**
 

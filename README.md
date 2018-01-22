@@ -4,7 +4,7 @@
 
 ## Description
 
-Unofficial python wrapper for the [img.shields.io](https:/img.shields.io) public API.
+Unofficial python wrapper for the [shields.io](https://shields.io) public API.
 
 ## Usage
 
@@ -25,4 +25,4 @@ Unofficial python wrapper for the [img.shields.io](https:/img.shields.io) public
 
 ## Credits
 
-- The wonderfull maker(s) of [img.shields.io](https:/img.shields.io)
+- The wonderfull maker(s) of [shields.io](https://shields.io)

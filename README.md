@@ -1,8 +1,6 @@
 # PYSHIELDS
 
-![](http://img.shields.io/badge/py-shields-lightgrey.svg?)
-![](http://img.shields.io/badge/python3-supported-green.svg?)
-![](http://img.shields.io/badge/python2-supported-green.svg?)
+![](http://img.shields.io/badge/py-shields-lightgrey.svg?) ![](http://img.shields.io/badge/python3-supported-green.svg?) ![](http://img.shields.io/badge/python2-supported-green.svg?)
 
 ## Description
 

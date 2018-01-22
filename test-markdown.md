@@ -1,5 +1,5 @@
 Simple static shield:
-![](http://img.shields.io/badge/foo-bar-red.svg?)
+![](http://img.shields.io/badge/foo-bar-red.svg)
 Test all available styles:
 ![](http://img.shields.io/badge/foo-bar-green.svg?style=plastic)
 ![](http://img.shields.io/badge/foo-bar-green.svg?style=flat)
@@ -7,16 +7,16 @@ Test all available styles:
 ![](http://img.shields.io/badge/foo-bar-green.svg?style=for-the-badge)
 ![](http://img.shields.io/badge/foo-bar-green.svg?style=social)
 Test all available named colors:
-![](http://img.shields.io/badge/foo-bar-brightgreen.svg?)
-![](http://img.shields.io/badge/foo-bar-green.svg?)
-![](http://img.shields.io/badge/foo-bar-yellowgreen.svg?)
-![](http://img.shields.io/badge/foo-bar-yellow.svg?)
-![](http://img.shields.io/badge/foo-bar-orange.svg?)
-![](http://img.shields.io/badge/foo-bar-red.svg?)
-![](http://img.shields.io/badge/foo-bar-lightgrey.svg?)
-![](http://img.shields.io/badge/foo-bar-blue.svg?)
+![](http://img.shields.io/badge/foo-bar-brightgreen.svg)
+![](http://img.shields.io/badge/foo-bar-green.svg)
+![](http://img.shields.io/badge/foo-bar-yellowgreen.svg)
+![](http://img.shields.io/badge/foo-bar-yellow.svg)
+![](http://img.shields.io/badge/foo-bar-orange.svg)
+![](http://img.shields.io/badge/foo-bar-red.svg)
+![](http://img.shields.io/badge/foo-bar-lightgrey.svg)
+![](http://img.shields.io/badge/foo-bar-blue.svg)
 Test a hex code color:
-![](http://img.shields.io/badge/foo-bar-FF00FF.svg?)
+![](http://img.shields.io/badge/foo-bar-FF00FF.svg)
 Test all available named logos:
 ![](http://img.shields.io/badge/foo-bar-red.svg?logo=appveyor)
 ![](http://img.shields.io/badge/foo-bar-red.svg?logo=bitcoin)

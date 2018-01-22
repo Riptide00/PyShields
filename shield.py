@@ -85,7 +85,10 @@ def _get_style(style, label, logo, logoWidth, linkA, linkB, colorA, colorB, maxA
         param.append("colorB=%s" % colorB)
     if maxAge:
         param.apped("maxAge=%s" % maxAge)
-    return "?%s" % "&".join(param)
+    if param:
+        return "?%s" % "&".join(param)
+    else:
+        return ''
 
 # Check as many errors before they hit the server.
 

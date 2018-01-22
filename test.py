@@ -96,7 +96,7 @@ class ExceptionTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    print("\nCheck for malformed urls in a mardown editor...\n\n")
+    print("\nCheck for malformed urls in a markdown editor...\n\n")
     main()
     print("\n\nChecking exceptions...\n\n")
     unittest.main()

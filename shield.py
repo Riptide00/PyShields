@@ -4,6 +4,16 @@
 import re
 
 
+def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("subject", help="Shield text left.", type=str)
+    parser.add_argument("status", help="Shield text right.", type=str)
+    parser.add_argument("color", help="Shield color right.", type=str)
+    args = parser.parse_args()
+    new_shield = Static(args.subject, args.status, args.color)
+    print(new_shield.generate())
+
 # Available badge styles.
 Styles = ["plastic", "flat", "flat-square", "for-the-badge", "social"]
 # Available badge colors.
@@ -129,3 +139,6 @@ def _check_named_logo(logo):
         return True
     else:
         return False
+
+if __name__ == '__main__':
+    main()

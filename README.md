@@ -10,7 +10,15 @@ Unofficial python wrapper for the [shields.io](https://shields.io) public API.
 
 **in the command line:**
 
-	python3 pyshields <subject> <status> <color> 
+    python shield.py [-h] subject status color
+
+    positional arguments:
+      subject     Shield text left.
+      status      Shield text right.
+      color       Shield color right.
+
+    optional arguments:
+      -h, --help  show this help message and exit
 
 **in a script:**
 

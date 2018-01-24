@@ -1,6 +1,6 @@
 # PYSHIELDS
 
-![](http://img.shields.io/badge/py-shields-lightgrey.svg?) ![](http://img.shields.io/badge/python3-supported-green.svg?) ![](http://img.shields.io/badge/python2-supported-green.svg?) ![](https://img.shields.io/badge/dynamic/json.svg?uri=https://raw.githubusercontent.com/Riptide00/PyShields/master/test.json&label=version&query=$.version&colorB=lightgrey)
+![](http://img.shields.io/badge/py-shields-lightgrey.svg?) ![](http://img.shields.io/badge/python3-supported-green.svg?) ![](http://img.shields.io/badge/python2-supported-green.svg?) ![](https://img.shields.io/badge/dynamic/json.svg?uri=https://raw.githubusercontent.com/Riptide00/PyShields/master/test.json&label=version&query=$.version&colorB=10ADED)
 
 ## Description
 

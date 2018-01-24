@@ -70,4 +70,4 @@ Dynamic shields
 
 **No options:**
 
-![](https://img.shields.io/badge/dynamic/json.svg?uri=https://raw.githubusercontent.com/Riptide00/PyShields/master/test.json&label=pyshields&query=$.version&colorB=lightgrey)
+![](https://img.shields.io/badge/dynamic/json.svg?uri=https://raw.githubusercontent.com/Riptide00/PyShields/master/test.json&label=pyshields&query=$.version&colorB=10ADED)

@@ -10,28 +10,37 @@ Unofficial python wrapper for the [shields.io](https://shields.io) public API.
 
 **in the command line:**
 
-      usage: shield.py [-h] [--style STYLE] [--label LABEL] [--logo LOGO]
+        usage: shield.py [-h] [--style STYLE] [--label LABEL] [--logo LOGO]
                    [--logoWidth LOGOWIDTH] [--linkA LINKA] [--linkB LINKB]
                    [--colorA COLORA] [--colorB COLORB] [--maxAge MAXAGE]
-                   subject status color
+                   [--source SOURCE] [--type TYPE]
+                   subject status_query color
 
-      positional arguments:
-        subject               Shield text left.
-        status                Shield text right.
-        color                 Right side color.
+        positional arguments:
+        subject               text left.
+        status_query          text right.
+        color                 color right.
 
-      optional arguments:
+        optional arguments:
         -h, --help            show this help message and exit
-        --style STYLE         Shield style.
-        --label LABEL         Left text override.
-        --logo LOGO           Left side logo.
+        --style STYLE         badge style
+        --label LABEL         text left
+        --logo LOGO           logo
         --logoWidth LOGOWIDTH
-                              Logo space width.
-        --linkA LINKA         Left side link.
-        --linkB LINKB         Right side link.
-        --colorA COLORA       Left side color override.
-        --colorB COLORB       Right side color override.
-        --maxAge MAXAGE       Cache time in seconds.
+                              logo space width
+        --linkA LINKA         link left
+        --linkB LINKB         link right
+        --colorA COLORA       color left
+        --colorB COLORB       color right
+        --maxAge MAXAGE       cache time in seconds
+        --source SOURCE       source
+        --type TYPE           type (default: json)
+
+        > python shield.py foo bar green
+        http://img.shields.io/badge/foo-bar-green.svg
+
+        > python shield.py version $.version 10ADED --source=https://raw.githubusercontent.com/Riptide00/PyShields/master/test.json
+        http://img.shields.io/badge/dynamic/json.svg?uri=https://raw.githubusercontent.com/Riptide00/PyShields/master/test.json&label=version&query=$.version&colorB=10ADED
   
 **in a script:**
 
@@ -51,7 +60,7 @@ Unofficial python wrapper for the [shields.io](https://shields.io) public API.
 
 - [x] Static shields.
 - [x] Dynamic shields.
-- [ ] Add dynamic shield generation from the cli.
+- [x] Add dynamic shield generation from the cli.
 
 
 ## Changelog

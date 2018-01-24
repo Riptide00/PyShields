@@ -19,8 +19,14 @@ def main():
     parser.add_argument("--colorA", help="color left", type=str)
     parser.add_argument("--colorB", help="color right", type=str)
     parser.add_argument("--maxAge", help="cache time in seconds", type=int)
+    parser.add_argument("--source", help="source", type=str)
+    parser.add_argument("--type", help="type (default: json)", type=str)
     args = parser.parse_args()
-    new_shield = Static(args.subject, args.status, args.color)
+    if args.source:
+        new_shield = Dynamic(args.source, args.subject,
+                             args.status, args.color)
+    else:
+        new_shield = Static(args.subject, args.status, args.color)
     if args.style:
         new_shield.style = args.style
     if args.label:
@@ -140,7 +146,7 @@ class Dynamic(object):
                  maxAge=None):
         super(Dynamic, self).__init__()
         # Configure for other host options.
-        self.url = "https://img.shields.io"
+        self.url = "http://img.shields.io"
         # Data object format.
         self.datatype = datatype
         # Data object location.

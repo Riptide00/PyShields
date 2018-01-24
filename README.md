@@ -43,7 +43,8 @@ Unofficial python wrapper for the [shields.io](https://shields.io) public API.
 ## Roadmap
 
 - [x] Static shields.
-- [ ] Dynamic shields.
+- [x] Dynamic shields.
+- [ ] Add dynamic shield generation from the cli.
 
 
 ## Changelog

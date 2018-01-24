@@ -94,8 +94,8 @@ class Static(object):
     def generate(self):
         """Generate static shield url."""
         _check_color(self.color)
-        format_subject = _check_text(self.subject)
-        format_status = _check_text(self.status)
+        format_subject = _format_text(self.subject)
+        format_status = _format_text(self.status)
         return _static % (self.url, format_subject,
                           format_status, self.color,
                           self._get_style())
@@ -107,7 +107,7 @@ class Static(object):
             _check_style(self.style)
             param.append("style=%s" % self.style)
         if self.label:
-            self.label = _check_text(self.label)
+            self.label = _format_text(self.label)
             param.append("label=%s" % self.label)
         if self.logo:
             _check_logo(self.logo)
@@ -119,10 +119,10 @@ class Static(object):
         if self.linkB:
             param.append("link=%s" % self.linkB)
         if self.colorA:
-            _check_color(self.colorA)
+            _check_onlyhex(self.colorA)
             param.append("colorA=%s" % self.colorA)
         if self.colorB:
-            _check_color(self.colorB)
+            _check_onlyhex(self.colorB)
             param.append("colorB=%s" % self.colorB)
         if self.maxAge:
             param.apped("maxAge=%s" % self.maxAge)
@@ -167,8 +167,8 @@ class Dynamic(object):
 
     def generate(self):
         """Generate a dynamic shield url."""
-        _check_color(self.colorB)
-        format_label = _check_text(self.label)
+        _check_onlyhex(self.colorB)
+        format_label = _format_text(self.label)
         return _dynamic % (self.url, self.datatype,
                            self.uri, format_label,
                            self.query, self.colorB,
@@ -190,7 +190,7 @@ class Dynamic(object):
         if self.linkB:
             param.append("link=%s" % self.linkB)
         if self.colorA:
-            _check_color(self.colorA)
+            _check_onlyhex(self.colorA)
             param.append("colorA=%s" % self.colorA)
         if self.maxAge:
             param.apped("maxAge=%s" % self.maxAge)
@@ -203,10 +203,11 @@ class Dynamic(object):
         else:
             return ''
 
+
 # Check as many errors before they hit the service.
 
 
-def _check_text(text):
+def _format_text(text):
     """Format text."""
     text = text.replace("-", "--")
     text = text.replace("_", "__")
@@ -220,39 +221,34 @@ def _check_style(style):
         raise ValueError("Invalid style: %s" % style)
 
 
-def _check_color(color):
+def _check_onlyhex(color):
     """Check if a valid color is passed."""
-    if not color in Colors:
-        if not _check_hex(color):
-            raise ValueError("Invalid color: %s" % color)
+    if color in Colors:
+        err = "Invalid color: %s : Named colors not supported"
+        raise ValueError(err % color)
+    _check_hex(color)
+
+
+def _check_color(color):
+    """Check if string is a named color."""
+    if color in Colors:
+        return
+    if not re.search(r'^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$', color):
+        raise ValueError("Invalid color: %s" % color)
+
+
+def _check_hex(color):
+    """Check if string is a hex color code."""
+    if not re.search(r'^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$', color):
+        raise ValueError("Invalid hex code: %s" % color)
 
 
 def _check_logo(logo):
     """Check if a valid named logo or location was passed."""
     # TODO: Add custom logo support.
-    if not _check_named_logo(logo):
-            raise ValueError("Invalid logo: %s" % logo)
+    if not logo in Logos:
+        raise ValueError("Invalid logo: %s" % logo)
 
-
-def _check_hex(color):
-    """Check if string is a hex color code."""
-    if re.search(r'^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$', color):
-        return True
-    else:
-        return False
-
-
-def _check_custom_logo(logo):
-    return False
-    # TODO: Add custom logo support.
-
-
-def _check_named_logo(logo):
-    """Check if a passed named logo is valid."""
-    if logo in Logos:
-        return True
-    else:
-        return False
 
 if __name__ == '__main__':
     main()

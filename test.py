@@ -7,7 +7,9 @@ import shield
 
 def main():
     # Output links to test in a browser or markdown editor.
-    print("Simple static shield:")
+    print("Static shields")
+    print("--------------")
+    print("No options:")
     test_static()
     print("Test all available styles:")
     test_styles()
@@ -25,6 +27,16 @@ def main():
     test_label()
     print("Test multiple style parameters:")
     test_multiple()
+    print("Dynamic shields")
+    print("---------------")
+    print("No options:")
+    test_dynamic()
+
+
+def test_dynamic():
+    test_uri = "http://github.com/Riptide00/PyShields/blob/master/test.json"
+    new_shield = shield.Dynamic(test_uri, "pyshields", "$version", "lightgrey")
+    print("![](%s)" % new_shield.generate())
 
 
 def test_static():
@@ -69,8 +81,10 @@ def test_label():
     new_shield = shield.Static("foo", "bar", "lightgrey", label="label")
     print("![](%s)" % new_shield.generate())
 
+
 def test_multiple():
-    new_shield = shield.Static("git", "hub", "lightgrey", colorA="FF00FF", colorB="FF00FF", label="bar", logo="github")
+    new_shield = shield.Static("git", "hub", "lightgrey", colorA="FF00FF",
+                               colorB="FF00FF", label="bar", logo="github")
     print("![](%s)" % new_shield.generate())
 
 
@@ -91,8 +105,6 @@ class ExceptionTest(unittest.TestCase):
     def test_style(self):
         new_shield = shield.Static("foo", "bar", "red", style="foobar")
         self.assertRaises(ValueError, new_shield.generate)
-   
-        
 
 
 if __name__ == '__main__':
@@ -100,4 +112,3 @@ if __name__ == '__main__':
     main()
     print("\n\nChecking exceptions...\n\n")
     unittest.main()
-

@@ -1,4 +1,6 @@
-Simple static shield:
+Static shields
+--------------
+No options:
 ![](http://img.shields.io/badge/py-shields-lightgrey.svg)
 Test all available styles:
 ![](http://img.shields.io/badge/style-plastic-lightgrey.svg?style=plastic)
@@ -44,3 +46,7 @@ Test label style parameter:
 ![](http://img.shields.io/badge/foo-bar-lightgrey.svg?label=label)
 Test multiple style parameters:
 ![](http://img.shields.io/badge/git-hub-lightgrey.svg?label=bar&logo=github&colorA=FF00FF&colorB=FF00FF)
+Dynamic shields
+---------------
+No options:
+![](https://img.shields.io/badge/dynamic/json.svg?uri=http://github.com/Riptide00/PyShields/blob/master/test.json&label=pyshields&query=$version&colorB=lightgrey)

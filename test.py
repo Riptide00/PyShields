@@ -35,7 +35,7 @@ def main():
 
 def test_dynamic():
     test_uri = "https://raw.githubusercontent.com/Riptide00/PyShields/master/test.json"
-    new_shield = shield.Dynamic(test_uri, "pyshields", "$version", "lightgrey")
+    new_shield = shield.Dynamic(test_uri, "pyshields", "$.version", "lightgrey")
     print("![](%s)" % new_shield.generate())
 
 

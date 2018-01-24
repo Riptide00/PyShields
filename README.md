@@ -1,6 +1,6 @@
 # PYSHIELDS
 
-![](http://img.shields.io/badge/py-shields-lightgrey.svg?) ![](http://img.shields.io/badge/python3-supported-green.svg?) ![](http://img.shields.io/badge/python2-supported-green.svg?)
+![](http://img.shields.io/badge/py-shields-lightgrey.svg?) ![](http://img.shields.io/badge/python3-supported-green.svg?) ![](http://img.shields.io/badge/python2-supported-green.svg?) ![](https://img.shields.io/badge/dynamic/json.svg?uri=https://raw.githubusercontent.com/Riptide00/PyShields/master/test.json&label=version&query=$.version&colorB=lightgrey)
 
 ## Description
 
@@ -35,10 +35,17 @@ Unofficial python wrapper for the [shields.io](https://shields.io) public API.
   
 **in a script:**
 
-	import shield
-    
-    new_shield = shield.Static("foo", "bar", "FF00FF")
-    print(new_shield.generate())
+    import shield
+
+    static_shield = shield.Static("foo", "bar", "FF00FF")
+    print(static_shield.generate())
+
+    test_url = "https://raw.githubusercontent.com/Riptide00/PyShields/master/test.json"
+    dynamic_shield = shield.Dynamic(test_url, "version", "$.version", "lightgrey")
+    print(dynamic_shield.generate())
+
+
+
 
 ## Roadmap
 

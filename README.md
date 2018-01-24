@@ -41,7 +41,7 @@ Unofficial python wrapper for the [shields.io](https://shields.io) public API.
     print(static_shield.generate())
 
     test_url = "https://raw.githubusercontent.com/Riptide00/PyShields/master/test.json"
-    dynamic_shield = shield.Dynamic(test_url, "version", "$.version", "lightgrey")
+    dynamic_shield = shield.Dynamic(test_url, "version", "$.version", "10ADED")
     print(dynamic_shield.generate())
 
 

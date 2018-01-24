@@ -149,10 +149,10 @@ class Dynamic(object):
         self.label = label
         # Query on the data object.
         self.query = query
-        # Right side color.
-        self.colorB = colorB
         # Left side color.
         self.colorA = colorA
+        # Right side color.
+        self.colorB = colorB
         # Shield style.
         self.style = style
         # Right side label prefix.
